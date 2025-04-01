@@ -1,0 +1,87 @@
+<html> 
+    <head>
+        <title>Blue Lock Kicler</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="main.css">
+        <!-- La page actuelle utilise des feuilles de style alternatives. Ouvrez FireFox ou Internet Explorer, et regardez dans le menu Affichage. -->
+        <link rel="alternate stylesheet" title="Red" href="Rouge.css">
+        <link rel="alternate stylesheet" title="Orange" href="Orange.css">
+        <link rel="alternate stylesheet" title="Basic" href="Basic.css">
+        <link rel="alternate stylesheet" title="Multi" href="Multi.css">
+        <script type="text/javascript" src="script.js">
+            </script>
+    </head>
+
+    <header>
+        <p>
+            Nombre de clicks:
+            <span id="clicks">0</span>  
+            Nombre de goals:
+            <span id="goals">0</span>
+            Bonus actifs:
+            <span id="bonusActif"></span>
+        </p>
+    </header>
+
+    <body>
+        <div>
+            <img id="but"src="image/butBase0.png">
+
+            <video id="videoPlayer" controls>
+                <source src="image\BlueLock2.mp4" type="video/mp4">
+            </video>
+
+            <input type="image" id="shoot"  src="image/ShootBase.png" onclick = "but()">
+
+        <div id="Bonus">
+                <p id="CoutIsagi">20 goals</p>
+                <button onclick="achatIsagi()"> <input type="image" id='Isagi' src=image/Isagi.png> </button>
+                <p id="CoutBachira">50 goals</p>
+                <button onclick="achatBachira()"> <input type="image" id='Bachira' src=image/Bachira.png> </button>
+                <p id="CoutRin">200 goals</p>
+                <button  onclick="achatRin()"> <input type="image" id='Rin' src=image/Rin.png> </button>
+                <p id="CoutNagi">500 goals</p>
+                <button onclick="achatNagi()"> <input type="image" id='Nagi' src=image/Nagi.png> </button>
+                <p id="CoutBaro">1000 goals</p>
+                <button onclick="achatBaro()"> <input type="image" id='Baro' src=image/Baro.png> </button>
+                <p id="CoutKunigami">5000 goals</p>
+                <button onclick="achatKunigami()"> <input type="image" id='Kunigami' src=image/Kunigami.png> </button>
+        </div> 
+    </body>
+
+    <footer>
+        <button><a href="#" id = "reset" onclick = "reset()">Reset</a></button>
+        <abbr>Blue Lock Clickers made by Trevys & Imad</abbr>
+
+        <ul id="playlist">
+            <a href="#" data-video-src="image\BlueLock2.mp4"></a>
+            <a href="#" data-video-src="image\playlist\Play1.mp4"></a>
+            <a href="#" data-video-src="image\playlist\Play2.mp4"></a>
+            <a href="#" data-video-src="image\playlist\Play3.mp4"></a>
+            <a href="#" data-video-src="image\playlist\Play4.mp4"></a>
+        </ul>
+        <ul id="playperso">
+            <a href="#" data-video-src="image\vidIsagi.mp4"></a>
+            <a href="#" data-video-src="image\vidBachira.mp4"></a>
+            <a href="#" data-video-src="image\vidRin.mp4"></a>
+            <a href="#" data-video-src="image\vidNagi.mp4"></a>
+            <a href="#" data-video-src="image\vidBaro.mp4"></a>
+            <a href="#" data-video-src="image\vidKunigami.mp4"></a>
+        </ul>
+        <script> 
+            const videoPlayer = document.getElementById('videoPlayer');
+            const videos = playlist.getElementsByTagName('a');
+            let currentVideoIndex = 0;
+            
+            function playNextVideo() {
+            currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+            const nextVideoSrc = videos[currentVideoIndex].getAttribute('data-video-src');
+            console.log(nextVideoSrc);
+            videoPlayer.setAttribute('src', nextVideoSrc);
+            videoPlayer.play();
+            }
+            videoPlayer.addEventListener('ended', playNextVideo);
+        </script>
+    </footer>
+</html>
+
