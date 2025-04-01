@@ -1,0 +1,93 @@
+header{
+    float: center;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    background-image:url(image/FondRouge.png);
+    font: inherit;
+    vertical-align: baseline;
+    overflow: hidden;
+}
+
+div{
+    float: right;
+}
+
+#shoot{
+    position: fixed;
+    width: 20%; 
+    margin-top: 20%;
+    padding: 10px;
+
+}
+
+#shoot:active{
+    transform: scale(0.95);
+}
+
+#but{
+    max-width: 65%; /*_*/
+    max-height: 65%; /*_*/
+}
+
+#videoPlayer{
+    position: fixed;
+    width: 20%; 
+    margin-top: 0;
+    padding: 10px;
+}
+
+#Isagi,#Bachira,#Rin,#Nagi,#Baro,#Kunigami{
+    right: 30%;
+    width: 90px;
+}
+
+abbr{
+    position: absolute;
+    left: 1%;
+    bottom: 0px;
+    z-index: 100000000;
+}
+span{
+    color: #000000;
+    -webkit-text-stroke: 1px #000000;
+}
+
+header{
+    font: 700 1em/1 "Oswald", sans-serif;
+    color: #faebd7;
+
+
+}
+
+p{
+    color:#000000;
+}
+
+
+#reset{
+    color:#FF0000;
+}
+
+abbr{
+    color:#faebd7;
+    font: 700 2em/1 "Oswald", sans-serif;
+    text-shadow: 0 0 80px #faebd7;
+    background: url(image/text1.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: aitf 80s linear infinite;
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
+
+}
+
+@-webkit-keyframes aitf {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
